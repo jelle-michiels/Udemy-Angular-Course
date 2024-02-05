@@ -11,7 +11,8 @@ export class AppComponent {
 
   changeDisplay() {
     this.displayDetails = !this.displayDetails;
-    this.numbers.push(this.numbers.length + 1);
+    // this.numbers.push(this.numbers.length + 1);
+    this.numbers.push(new Date());
   }
 }
 
