@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Recipe} from "../recipe.model";
 
 @Component({
   selector: 'app-recipe-list',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './recipe-list.component.css'
 })
 export class RecipeListComponent {
-  recipes = [];
+  recipes: Recipe[] = [new Recipe('A Test Recipe', 'This is simply a test', 'https://i0.wp.com/picjumbo.com/wp-content/uploads/adding-apple-to-make-christmas-gingerbread-cookies-more-soft-free-photo.jpg?w=2210&quality=70'),
+    new Recipe('A Test Recipe', 'This is simply a test', 'https://i0.wp.com/picjumbo.com/wp-content/uploads/adding-apple-to-make-christmas-gingerbread-cookies-more-soft-free-photo.jpg?w=2210&quality=70')];
 
+  constructor() {
+  }
 }
