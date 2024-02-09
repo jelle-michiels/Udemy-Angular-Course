@@ -8,11 +8,11 @@
       <ul class="list-group">
         @if (onlyOdd) {
           @for (oddNumber of oddNumbers; track $index) {
-            <li class="list-group-item">{{ oddNumber }}</li>
+            <li class="list-group-item" [ngClass]="{odd: oddNumber % 2 !== 0}" [ngStyle]="{backgroundColor: oddNumber % 2 !== 0 ? 'yellow' : 'transparent'}">{{ oddNumber }}</li>
           }
         } @else {
           @for (evenNumber of evenNumbers; track $index) {
-            <li class="list-group-item">{{ evenNumber }}</li>
+            <li class="list-group-item" [ngClass]="{odd: evenNumber % 2 !== 0}" [ngStyle]="{backgroundColor: evenNumber % 2 !== 0 ? 'yellow' : 'transparent'}">{{ evenNumber }}</li>
           }
         }
       </ul>
